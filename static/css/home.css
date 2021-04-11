@@ -1,0 +1,93 @@
+@import "reset.css";
+
+.title {
+  color: #4c0694;
+  font-size: 50px;
+  position: relative;
+}
+
+#D {
+  color: #ce141f;
+}
+#r {
+  color: #e57c00;
+}
+#e {
+  color: #e5e33f;
+}
+#a {
+  color: #42c441;
+}
+#m {
+  color: #357ecd;
+}
+
+#D,
+#r,
+#e,
+#a,
+#m {
+  font-size: 60px;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body::before {
+  content: "";
+  background-image: url(https://images.unsplash.com/photo-1591853551873-0076cfa7dc7b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fHJhaW5ib3d8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.6;
+}
+
+.search-bar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+}
+
+#search__input {
+  width: 200px;
+  font-size: 20px;
+  outline: none;
+  text-align: center;
+  border: none;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  background-color: transparent;
+}
+
+.search-bar button {
+  width: 100px;
+  height: 40px;
+  background-color: #418ca9;
+  border: none;
+  outline: none;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #509fbe;
+}
+
+.search-bar i {
+  margin-right: 5px;
+}

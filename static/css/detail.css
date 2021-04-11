@@ -1,0 +1,126 @@
+@import "reset.css";
+
+body {
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  background-image: url(https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8ZmluZHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.6;
+  background-attachment: fixed;
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+#header h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+#header h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+#header a {
+  margin-bottom: 15px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+#header a:hover {
+  text-decoration: underline;
+}
+
+#header .back i {
+  margin-right: 10px;
+}
+
+#main {
+  position: relative;
+  margin-top: 50px;
+}
+
+.result,
+.result-object {
+  display: grid;
+  width: 100vw;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 40px;
+  padding: 10px 100px;
+  box-sizing: border-box;
+}
+
+.result-item:nth-child(1),
+.result-object-item:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.result-item:nth-child(2),
+.result-object-item:nth-child(2) {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.result-item:nth-child(3),
+.result-object-item:nth-child(3) {
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+
+.result-item:nth-child(4),
+.result-object-item:nth-child(4) {
+  grid-column-start: 5;
+  grid-column-end: 6;
+}
+
+.result-item,
+.result-object-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-item {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.result-object-item {
+  font-size: 20px;
+  margin-bottom: 100px;
+}
+
+.result-object-item:nth-child(1) {
+  justify-content: flex-start;
+}
+
+.result-object-item a {
+  text-decoration: none;
+}
+
+.result-object-item a:hover {
+  text-decoration: underline;
+}

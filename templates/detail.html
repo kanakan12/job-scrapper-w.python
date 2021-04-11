@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remote Jobs</title>
+    <link rel="stylesheet" href="../static/css/detail.css" />
+  </head>
+  <body>
+    <header id="header">
+      <h1>Remote Jobs</h1>
+      <h2>{{count}} {{word}} jobs found</h2>
+      <a class="export" href="/export?word={{word}}">Export to CSV</a>
+      <a class="back" href="/">
+        <i class="fas fa-arrow-circle-left"></i>Go Back</a
+      >
+    </header>
+    <main id="main">
+      <div class="result">
+        <div class="result-item">
+          <span>TITLE</span>
+        </div>
+        <div class="result-item">
+          <span>COMPANY</span>
+        </div>
+        <div class="result-item">
+          <span>LOCATION</span>
+        </div>
+        <div class="result-item">
+          <span>LINK</span>
+        </div>
+      </div>
+      {% for job in jobs %}
+      <div class="result-object">
+        <div class="result-object-item">
+          <span>{{job.title}}</span>
+        </div>
+        <div class="result-object-item">
+          <span>{{job.company}}</span>
+        </div>
+        <div class="result-object-item">
+          <span>{{job.location}}</span>
+        </div>
+        <div class="result-object-item">
+          <a href="{{job.link}}" target="_blank">Apply</a>
+        </div>
+      </div>
+      {% endfor %}
+    </main>
+
+    <script
+      src="https://kit.fontawesome.com/fddc3a13b2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
